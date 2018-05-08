@@ -8,7 +8,7 @@
                   <span class="welcome">你好，{{user.username}}</span>
                   <button href="#" class="button" @click.prevent="signOut">登出</button>
                </div>
-              <a class="login" href="#" @click.prevent="signInDialogVisible = true"><i class="fa fa-user-circle"></i></a>
+              <a class="login-u" href="#" @click.prevent="signInDialogVisible = true"><i class="fa fa-user-circle"></i></a>
                <button class="button" v-on:click="preview">预览</button>
             </div>  
         </div>
@@ -18,7 +18,7 @@
                   </MyDialog>
           <MyDialog title="登录" :visible="signInDialogVisible" @close="signInDialogVisible = false">
                     <SignInForm @success="signIn($event)"/> 
-                  </MyDialog>  
+                  </MyDialog>   
     </div>
 </template>
 
@@ -135,7 +135,7 @@
     }
         .actions{
             display: flex;
-            .login {
+            .login-u {
                 float: right;
                 margin-right: 20px;
                 font-size: 30px;
